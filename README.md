@@ -1,4 +1,21 @@
+macro scheduler loop
+Shift + Esc
+------------
+//VK119=F8
+OnEvent>Key_Down,VK119,0,STOP
 
+SRT>STOP
+  MDL>Stopping
+  Exit>0
+END>STOP
+
+
+Label>start
+  my code here
+  my code here
+  my code here
+GoTo>start
+-----------
 時資率(直接人員)=[(本薪+全勤獎金+績效獎金+訓練獎金+工作環境津貼+出勤班次之輪班津貼+Probe Card特別津貼)/240]
 休息日加班費率為2倍 。(自2018/03/01起生效)
 6. 國定假日及四班二輪優於法定紀念日，加班費計算結果不得低於1日工資。 (四班二輪制，自2017/03起生效)
@@ -13,4 +30,4 @@
 
 
 
-macro scheduler loop
+
