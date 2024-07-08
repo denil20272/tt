@@ -16,6 +16,11 @@ Label>start
   my code here
 GoTo>start
 -----------
+Selenium
+---------
+javascript:(function() { function R(a){ona = "on"+a; if(window.addEventListener) window.addEventListener(a, function (e) { for(var n=e.originalTarget; n; n=n.parentNode) n[ona]=null; }, true); window[ona]=null; document[ona]=null; if(document.body) document.body[ona]=null; } R("contextmenu"); R("click"); R("mousedown"); R("mouseup"); R("selectstart");})()
+----------
+
 時資率(直接人員)=[(本薪+全勤獎金+績效獎金+訓練獎金+工作環境津貼+出勤班次之輪班津貼+Probe Card特別津貼)/240]
 休息日加班費率為2倍 。(自2018/03/01起生效)
 6. 國定假日及四班二輪優於法定紀念日，加班費計算結果不得低於1日工資。 (四班二輪制，自2017/03起生效)
