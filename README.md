@@ -34,6 +34,11 @@ Selenium
 ---------
 javascript:(function() { function R(a){ona = "on"+a; if(window.addEventListener) window.addEventListener(a, function (e) { for(var n=e.originalTarget; n; n=n.parentNode) n[ona]=null; }, true); window[ona]=null; document[ona]=null; if(document.body) document.body[ona]=null; } R("contextmenu"); R("click"); R("mousedown"); R("mouseup"); R("selectstart");})()
 ----------
+單月加班上限可至54小時
+每三個月加班總時數上限138小時
+1個月加班時數上限得放寬為54小時，惟3個月之加班總時數仍不得超過138小時(46小時x3個月)
+
+
 輪班津貼
 凡因請事、病假未能在該班次工作，自當月輪班津貼中，每小時扣除1/240的輪班津貼。
 工作環境津貼
