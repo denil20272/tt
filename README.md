@@ -41,6 +41,14 @@ javascript:(function() { function R(a){ona = "on"+a; if(window.addEventListener)
 全勤獎金
 每月請病假及事假者，缺勤一天(
 
+1/1
+除夕
+春節農曆1.2.3日
+2/28
+兒童節
+清明節
+1/2
+3/29
 
 
 
