@@ -1,4 +1,16 @@
 
+Excel快捷鍵
+C+A V貼上文本
+W+L 鎖定計算機
+W+M 縮小所有視窗
+W+E 檔案總管
+W+D 顯示桌面
+
+按Windows 標誌鍵 + Shift + S 以進行靜態影像剪取
+按Print Screen (PrtSc)以進行靜態影像剪取
+
+
+
 8月加3天
 9月加4天
 10月加8天
