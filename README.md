@@ -1,3 +1,11 @@
+Dim lastRow As Long
+    Dim currentColumn As Long
+    
+    currentColumn = ActiveCell.Column ' 取得當前選取的列
+    lastRow = Cells(Rows.Count, currentColumn).End(xlUp).Row ' 找到當前列最後一個有內容的行
+    
+    ' 只在當前列中選取有內容的儲存格
+    Range(Cells(1, currentColumn), Cells(lastRow, currentColumn)).SpecialCells(xlCellTypeConstants).Select
 
 Excel快捷鍵
 C+A V貼上文本
