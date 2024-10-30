@@ -2,6 +2,39 @@
 
 
 
+Sub DeleteDuplicatesInColumnD()
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim i As Long
+    Dim cell As Range
+    Dim uniqueValues As Object
+    
+    ' 設定要操作的工作表
+    Set ws = ThisWorkbook.Sheets("Sheet1") '根據您的實際工作表名稱調整
+    
+    ' 獲取 D 列最後一行的行號
+    lastRow = ws.Cells(ws.Rows.Count, "D").End(xlUp).Row
+    
+    ' 使用字典來儲存唯一值
+    Set uniqueValues = CreateObject("Scripting.Dictionary")
+    
+    ' 從最後一行開始遍歷資料，往上檢查重複項
+    For i = lastRow To 1 Step -1
+        Set cell = ws.Cells(i, "D")
+        
+        ' 若值未在字典中則新增，若已存在則刪除該列
+        If Not uniqueValues.exists(cell.Value) Then
+            uniqueValues.Add cell.Value, Nothing
+        Else
+            cell.EntireRow.Delete
+        End If
+    Next i
+End Sub
+
+
+
+
+
 Dim lastRow As Long
     Dim currentColumn As Long
     
