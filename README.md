@@ -5,6 +5,13 @@
 3-29
 4-3.4
 
+1
+15.16.19.20.27.28.31
+2
+1.5.24.25.28
+3
+1.4.5.17.24.25.28
+
 
 Sub DeleteDuplicatesInColumnD()
     Dim ws As Worksheet
