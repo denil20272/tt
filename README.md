@@ -1,9 +1,6 @@
-曾千柔, Chian Rou Tseng CRTSENGB@tsmc.com
-國假
-1-1.2.28.29.30.31
-2-28
-3-29
-4-3.4
+曾千柔, Chian Rou Tseng CRTSENGB@tsmc.co
+
+
 
 1
 15.16.19.20.27.28.31
