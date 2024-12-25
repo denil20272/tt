@@ -1,4 +1,8 @@
+thin film    TF 薄膜    CVD,PVD,CMP,EPI
+diffusion    DIF 擴散    IMP,WET
 
+etching    ETC 蝕刻    dry etch, wet etch(老廠wet則歸類為dif部門)
+lithography    LIT 黃光    SCANNER,TRACK
 
 
 
