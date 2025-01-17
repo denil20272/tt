@@ -3,7 +3,7 @@ Send C
 Release CTRL
 
 Send>^c
-
+WaitClipBoard
 
 
 
