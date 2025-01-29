@@ -193,3 +193,73 @@ javascript:(function() { function R(a){ona = "on"+a; if(window.addEventListener)
 未滿一個月者，每日以1/30比例計發，有請病.事.家庭照顧.曠職，則以實際時數扣除，每小時扣除1/240
 全勤獎金
 事.病假視為缺勤，缺勤一天內"包含"即扣除1/3，一天以上、二天以內"包含"扣除2/3，二天以上就不發。曠職也不發。
+
+
+
+powershell
+
+# 設定圖片檔案路徑
+$imagePath = "$env:USERPROFILE\Desktop\image.jpg"
+
+# 讀取圖片檔案並轉換為 Base64
+$base64String = [Convert]::ToBase64String((Get-Content -Path $imagePath -Encoding Byte))
+
+# 輸出 Base64 編碼
+$base64String > "$env:USERPROFILE\Desktop\image_base64.txt"
+
+# 選擇是否顯示在 PowerShell 上
+$base64String
+
+
+
+# 設定 Base64 編碼檔案路徑和輸出圖片檔案名稱
+$base64FilePath = "$env:USERPROFILE\Desktop\image_base64.txt"
+$outputImagePath = "$env:USERPROFILE\Desktop\decoded_image.jpg"
+
+# 讀取 Base64 編碼
+$base64String = Get-Content -Path $base64FilePath
+
+# 將 Base64 字串轉回位元組
+$imageBytes = [Convert]::FromBase64String($base64String)
+
+# 將位元組寫回為圖片檔案
+[System.IO.File]::WriteAllBytes($outputImagePath, $imageBytes)
+
+Write-Host "圖片已成功解碼，儲存為 $outputImagePath"
+
+在 Macro Scheduler 中，可以使用 Repeat 和 Until 來建立迴圈，或使用 While 和 EndWhile。
+
+以下是兩種寫法的範例：
+
+1. 使用 Repeat ... Until 建立迴圈
+
+Let>Counter=0
+
+Repeat
+  Let>Counter=Counter+1
+  MessageModal>這是第 %Counter% 次執行
+Until>Counter=5
+
+說明：
+	•	Let>Counter=0：設定計數器初始值為 0。
+	•	Repeat：開始迴圈。
+	•	Let>Counter=Counter+1：每次執行迴圈時計數器加 1。
+	•	MessageModal：彈出訊息框顯示計數。
+	•	Until>Counter=5：當計數器等於 5 時結束迴圈。
+
+2. 使用 While ... EndWhile 建立條件迴圈
+
+Let>Counter=0
+
+While>Counter<5
+  Let>Counter=Counter+1
+  MessageModal>這是第 %Counter% 次執行
+EndWhile
+
+說明：
+	•	While>Counter<5：當計數器小於 5 時執行迴圈。
+	•	EndWhile：結束迴圈。
+
+兩者的執行結果相同，都會執行 5 次迴圈。如果你的邏輯需要更複雜的條件，也可以在 Until 或 While 裡面加入更多判斷條件。
+
+如果有更具體的需求，可以再提供細節，我幫你修改！
