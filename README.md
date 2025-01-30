@@ -263,3 +263,39 @@ EndWhile
 兩者的執行結果相同，都會執行 5 次迴圈。如果你的邏輯需要更複雜的條件，也可以在 Until 或 While 裡面加入更多判斷條件。
 
 如果有更具體的需求，可以再提供細節，我幫你修改！
+
+
+
+
+
+Macro Scheduler 6.2 是比較早期的版本，可能不支援新的語法（例如 Repeat ... Until 和 While ... EndWhile）。但你可以使用 Goto 和 Label 來模擬迴圈功能。以下是適用於 Macro Scheduler 6.2 的替代方法：
+
+1. 使用 Goto 和 Label 模擬迴圈
+
+Let>Counter=0
+Label>LoopStart
+Let>Counter=Counter+1
+MessageModal>這是第 %Counter% 次執行
+If>Counter<5,Goto>LoopStart
+
+說明：
+	•	Let>Counter=0：設定計數器初始值為 0。
+	•	Label>LoopStart：定義一個標籤，作為迴圈的起始位置。
+	•	If>Counter<5,Goto>LoopStart：如果計數器小於 5，跳回 LoopStart 位置，繼續執行迴圈。
+
+2. 無條件執行固定次數的迴圈
+
+如果你只需要執行固定次數，可以簡化為：
+
+Let>Counter=0
+Label>LoopStart
+Let>Counter=Counter+1
+MessageModal>迴圈執行中，次數：%Counter%
+Goto>EndLoop,Counter=5
+Goto>LoopStart
+Label>EndLoop
+
+說明：
+	•	當 Counter=5 時，跳到標籤 EndLoop 結束迴圈。
+
+如果你的版本限制更多，或需要特定功能，可以再說明需求，我幫你設計替代方案！
