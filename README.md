@@ -1,6 +1,3 @@
-Press CTRL
-Send C
-Release CTRL
 
 Send>^c
 WaitClipBoard
@@ -63,7 +60,6 @@ to39889
 
 
 
-
 1
 15.16.19.20.27.28.31
 2
@@ -71,48 +67,6 @@ to39889
 3
 1.4.5.17.24.25.28
 
-
-Sub DeleteDuplicatesInColumnD()
-    Dim ws As Worksheet
-    Dim lastRow As Long
-    Dim i As Long
-    Dim cell As Range
-    Dim uniqueValues As Object
-    
-    ' 設定要操作的工作表
-    Set ws = ThisWorkbook.Sheets("Sheet1") '根據您的實際工作表名稱調整
-    
-    ' 獲取 D 列最後一行的行號
-    lastRow = ws.Cells(ws.Rows.Count, "D").End(xlUp).Row
-    
-    ' 使用字典來儲存唯一值
-    Set uniqueValues = CreateObject("Scripting.Dictionary")
-    
-    ' 從最後一行開始遍歷資料，往上檢查重複項
-    For i = lastRow To 1 Step -1
-        Set cell = ws.Cells(i, "D")
-        
-        ' 若值未在字典中則新增，若已存在則刪除該列
-        If Not uniqueValues.exists(cell.Value) Then
-            uniqueValues.Add cell.Value, Nothing
-        Else
-            cell.EntireRow.Delete
-        End If
-    Next i
-End Sub
-
-
-
-
-
-Dim lastRow As Long
-    Dim currentColumn As Long
-    
-    currentColumn = ActiveCell.Column ' 取得當前選取的列
-    lastRow = Cells(Rows.Count, currentColumn).End(xlUp).Row ' 找到當前列最後一個有內容的行
-    
-    ' 只在當前列中選取有內容的儲存格
-    Range(Cells(1, currentColumn), Cells(lastRow, currentColumn)).SpecialCells(xlCellTypeConstants).Select
 
 Excel快捷鍵
 C+A V貼上文本
@@ -241,7 +195,6 @@ tPNN5+jmfvlkvMr4IX2y7uiLlGtagzb6ta9H7e/vy3cFPkO+Y6P3I20v7yz9XwDz+jj77cfP998+xbzM
 qn8NuA8Jd19InXv/6dx9tXXv4da9J2i2RY/UvvmnUTWbYPWN2pAS7Yc8pkk12iReY57/zZlfz+F5x7NbW68ete+8R7P428vul2bAQQY1pInElQIN68anYCihFPQ3mFAK+htMIAX9jSWVgv4Wu+0FtIAUiKIkUqDj9d+IpvrXwNGloL/tRFKA1myC1TdqQ0a0H+oxTZr
 RUgBoNyCJFBziHQmloL/FrhSAzk05pA8jKiAqiG6CalAKVKICooKUqSC2FAxABXGlIPtUABrXTYOoYPKp4OmDzZ//hg4GjAfUQBTlAQzaD263/3hT2nq13n7/v863z/xqJjYYGRswGZ0NEJt0VtiAycBMFUERCA7GHQ6SKEI0HzAIKgLkgg9QFIEQAQ8RYitCNCIgNu
 msIIKnCGFoRIwwaYyAGzlQJOAS1/fLQbcoD4BAkYMxoQPP6eS4N3YAOogrLxmnAwU4N7ihIUgBwcG4wwFu5MDv97WgFCQLImeNDChyMCZYkEwKBsCCuFKQcSxwpUCXGVOJCiaYCvw3RNvv/jJEPFCDmpAsmpwKHuDRAaHA6AYR4QcKYptMDQVefLnz7/fb6+v4g4hkk
-
 5ytZYQOmyKCGBEyIDSaNDdAHEbkzt/RIgVdEYEBgkC4YMHwwyFtugQIgMx7ahxEYTBoYoEcMRL9vBKXAICogKkibCvAjBnlLPFbcN0Tc1ENejREVEBVESwEUmDEjH5ACKACfYXiP8vJ0XPrHtHV4HRT42cLcuc7bf+6sf9d58HmBwGBEYCD8DnVeIl8N4o5Oyj4YcN1
 kOsI7IgKDcQeDYUQMQGK9Y0u9ImIDYoM02UA4HeqEpb7J/LEB09xkA2IDYoMEbMCUoBQoFDEgMEgZDGIHj6PAIH+zEblSoBqmEvLCjcBgtGBwfvwjBkySdxMK9kvBbtoBUQFRQXpUoBAVIFABiF4sDLAIC0aLBbG1IH0s8LSAsRm2pwV+UQIt6P8sryKGDOLb6l8H7p
 yOhfbb19u3fth5srHz5DlhweiwIO6iAwNgQe4yDIQWgGoaNJKIuCAJF3SHDe3Tgu44U+IC4oKUuIAhT1KaTF4yzwWMm2DysBmZiAsmjQuGkXzMPsxCtF8ONGQ0GM+IAU1MNFZ04D6Z4NNBzlY5cxXBANMMe+lGdEB0EN0GlaAcqEQHRAcp00FsLSA6CNMClQMzQ9oI0
