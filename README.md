@@ -1,3 +1,5 @@
+ㄗTYGHG
+TYCHENBT@tsmc.com 陳葶芸
 
 Send>^c
 WaitClipBoard
