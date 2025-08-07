@@ -1,3 +1,5 @@
+6.7.11.14.18.19.23.27.30
+
 PI damage	粗邊, 中間正常
 PBO residue	不規則, 比Chemical drop誇張
 De-wet		PM洞外圍有chemical滲進去
