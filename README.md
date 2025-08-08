@@ -1,3 +1,14 @@
+xlMoveAndSize
+✅ 隨儲存格一起移動與縮放 ← 你要的設定
+xlMove
+移動但不縮放（只會跟著儲存格移動）
+xlFreeFloating
+❌ 原地不動，不隨儲存格移動或縮放 ← 最常出問題的
+
+
+
+
+
 Sub 貼上並鎖定圖片到儲存格()
 
     Dim 目標儲存格 As Range
