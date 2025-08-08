@@ -1,28 +1,5 @@
 6.7.11.14.18.19.23.27.30
 
-PI damage	粗邊, 中間正常
-PBO residue	不規則, 比Chemical drop誇張
-De-wet		PM洞外圍有chemical滲進去
-PR residue	在PPI層的光阻周圍
-PR bubble	光阻翹起變實黑
-Pattern abnormal開口圖形沒定義好, 光阻殘留
-PI non-uniform	光照太久, 圓弧狀
-UBM residue	深色光阻, 空曠區金屬殘留物
-Metal residue	UBM residue碰到兩個金屬
-PPI damage	圓形的, 氣泡造成的金屬層沒鍍好
-Metal damage	大塊的破洞
-PPI plating defect 只發生在金屬區
-Chemical residue藥劑殘留
-PR poor coating	ADI沒定義好光阻, 導致多鍍上去
-PI poor coating	PM光阻滴在上面
-PPI non-uniform	前層PM開孔變實黑
-Bubble		不是PI broken的不規則, 破掉且很圓
-PPI damage-PA	Particle造成細線區斷線
-PR Peeling	與前站開孔邊有髒東西, 導致PR翹起
-UBM damage	拔掉傷到底下開孔, 底下綠綠的
-Solder residue	在不該長柱子的地方,長出
-
-3.7.11.14.18.19.23.27.30
 
 
 補
