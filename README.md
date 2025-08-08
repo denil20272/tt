@@ -1,3 +1,47 @@
+Sub 貼上並鎖定圖片到儲存格()
+
+    Dim 目標儲存格 As Range
+    Dim 貼上圖 As Picture
+    Dim 圖片左 As Double, 圖片上 As Double
+    Dim 圖片寬 As Double, 圖片高 As Double
+
+    ' 取得當前選取儲存格
+    Set 目標儲存格 = ActiveCell
+
+    ' 確保剪貼簿有圖片
+    On Error GoTo 沒圖片
+    Set 貼上圖 = ActiveSheet.Pictures.Paste
+    On Error GoTo 0
+
+    ' 將圖片定位到選取儲存格的左上角
+    With 目標儲存格
+        圖片左 = .Left
+        圖片上 = .Top
+        圖片寬 = .Width
+        圖片高 = .Height
+    End With
+
+    ' 設定圖片大小與儲存格一致
+    With 貼上圖
+        .Left = 圖片左
+        .Top = 圖片上
+        .Width = 圖片寬
+        .Height = 圖片高
+        .Placement = xlMoveAndSize ' 圖片會跟著儲存格移動與縮放
+    End With
+
+    Exit Sub
+
+沒圖片:
+    MsgBox "剪貼簿中沒有圖片，請先複製一張圖片再執行。", vbExclamation
+
+End Sub
+
+
+
+
+
+
 6.7.11.14.18.19.23.27.30
 
 
